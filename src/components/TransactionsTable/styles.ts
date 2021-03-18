@@ -15,6 +15,16 @@ export const Container = styled.div`
       line-height: 1.5rem;
     }
 
+    tbody{
+      tr {
+        transition: 0.2s;
+
+        &:hover {
+          transform: translateX(0.5rem);
+        }
+      }
+    }
+
     td {
       padding: 1rem 2rem;
       border: 0;

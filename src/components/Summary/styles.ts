@@ -13,6 +13,8 @@ export const Container = styled.div`
     color: var(--text-title);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
 
+    transition: 0.2s;
+
     header {
       display: flex;
       align-items: center;
@@ -25,6 +27,10 @@ export const Container = styled.div`
       font-size: 2rem;
       font-weight: 500;
       line-height: 3rem;
+    }
+
+    &:hover {
+      transform: translateY(-0.5rem);
     }
 
     &.highlight-background {
