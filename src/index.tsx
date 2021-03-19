@@ -8,6 +8,29 @@ createServer({
     transaction: Model,
   },
 
+  seeds(server) {
+    server.db.loadData({
+      transactions: [
+        {
+          id: 1,
+          title: 'Freelance de website',
+          type: 'deposit',
+          category: 'Dev',
+          amount: 6000,
+          createdAt: new Date('2021-03-14 13:00:00'),
+        },
+        {
+          id: 2,
+          title: 'Internet',
+          type: 'withdraw',
+          category: 'Contas',
+          amount: 100,
+          createdAt: new Date('2021-03-15 16:00:00'),
+        },
+      ],
+    })
+  },
+
   routes() {
     this.namespace = 'api';
 
@@ -21,7 +44,7 @@ createServer({
       return schema.create('transaction', data);
     })
   }
-})
+});
 
 ReactDOM.render(
   <React.StrictMode>
